@@ -13,7 +13,7 @@ module ChrnoFormBuilder
       #
       # @example
       #   build_html do |b|
-      #     b.div( id: foo ) {
+      #     b.div( id: "foo" ) {
       #       b.span {
       #          b << "bar"
       #       }
