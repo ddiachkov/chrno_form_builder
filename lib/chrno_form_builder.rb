@@ -10,7 +10,7 @@ module ChrnoFormBuilder
     initializer "chrno_form_builder.initialize", :before => :disable_dependency_loading do |app|
       # Загружаем расширения
       ActiveSupport.on_load( :action_view ) do
-        puts "--> load chrno_form_builder"
+        Rails.logger.debug "--> load chrno_form_builder"
 
         include ChrnoFormBuilder::Helpers::HtmlBuilder
         include ChrnoFormBuilder::Helpers::ErrorHelper
