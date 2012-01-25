@@ -11,8 +11,8 @@ Gem::Specification.new do |s|
   s.homepage    = "http://larkit.ru"
   s.summary     = "Extended form builder for ActionView"
 
-  s.files         = Dir[ "*", "lib/**/*" ]
-  s.require_paths = [ "lib" ]
+  s.files        = `git ls-files`.split( "\n" )
+  s.require_path = "lib"
 
   s.add_runtime_dependency "rails", ">= 3.0"
 end
