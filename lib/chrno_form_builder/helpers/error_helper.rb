@@ -16,7 +16,7 @@ module ChrnoFormBuilder
         return nil unless record.errors.any?
 
         build_html do |b|
-          b.ul( id: "errors" ) {
+          b.ul( class: "errors" ) {
              record.errors.full_messages.each { |msg| b.li { b << msg }}
           }
         end
