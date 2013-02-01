@@ -1,6 +1,6 @@
 (function($) {
   // Создание вложенной модели
-  $(".create-nested-model").live ("click", function () {
+  $(document).on ("click", ".create-nested-model", function () {
     // Формируем модель из шаблона
     var new_model = $("#" + $(this).data ("blueprint")).tmpl ({
         association : $(this).data ("association")
@@ -16,7 +16,7 @@
   });
 
   // Удаление вложенной модели
-  $(".destroy-nested-model").live ("click", function () {
+  $(document).live ("click", ".destroy-nested-model", function () {
     // Получаем модель по её имени
     var model = $(".nested-model[data-model='" + $(this).data ("association") + "']");
 
