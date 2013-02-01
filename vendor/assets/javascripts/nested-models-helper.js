@@ -16,7 +16,7 @@
   });
 
   // Удаление вложенной модели
-  $(document).live ("click", ".destroy-nested-model", function () {
+  $(document).on ("click", ".destroy-nested-model", function () {
     // Получаем модель по её имени
     var model = $(".nested-model[data-model='" + $(this).data ("association") + "']");
 
